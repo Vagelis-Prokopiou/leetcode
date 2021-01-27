@@ -5,6 +5,9 @@ Given two sorted arrays nums1 and nums2 of size m and n respectively, return the
 Follow up: The overall run time complexity should be O(log (m+n)).
 */
 
+// #![feature(test)]
+// extern crate test;
+
 pub struct Solution {}
 
 impl Solution {
@@ -44,6 +47,7 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::*;
+    // use test::Bencher;
 
     #[test]
     fn test_find_median_sorted_arrays() {
@@ -68,4 +72,11 @@ mod tests {
             2.5
         );
     }
+
+    // #[bench]
+    // fn bench_find_median_sorted_arrays(b: &mut Bencher) {
+    //     let nums1 = [1, 2];
+    //     let nums2 = [3, 4];
+    //     b.iter(|| Solution::find_median_sorted_arrays(Vec::from(nums1), Vec::from(nums2)));
+    // }
 }
